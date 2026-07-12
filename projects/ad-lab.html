@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Active Directory Lab — Alex Rivera</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/project.css" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <nav class="proj-nav">
+    <a href="../index.html">← Home</a>
+    <span>/</span>
+    <span>projects</span>
+    <span>/</span>
+    <span style="color:#fff">active-directory-lab</span>
+  </nav>
+
+  <div class="proj-hero">
+    <div class="container">
+      <p class="proj-tag">Home Lab · Active Directory</p>
+      <h1>Active Directory Lab Setup</h1>
+      <p>Built a virtualized Windows Server environment to practice enterprise AD administration — from domain creation to Group Policy deployment.</p>
+      <div class="proj-meta">
+        <div class="meta-item">
+          <span class="meta-label">Tools Used</span>
+          <span class="meta-value">VirtualBox, Windows Server 2022, Windows 10</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Duration</span>
+          <span class="meta-value">3 weekends</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Difficulty</span>
+          <span class="meta-value">Intermediate</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="proj-body">
+
+    <h2>Overview</h2>
+    <p>
+      Most entry-level IT support roles require some familiarity with Active Directory — but without enterprise access, it's hard to build that experience. This project replicates a small business AD environment using free virtualization tools.
+    </p>
+
+    <h2>Environment Setup</h2>
+    <p>I used VirtualBox to create two VMs on my personal laptop:</p>
+    <ul>
+      <li>Windows Server 2022 (Domain Controller) — 4GB RAM, 60GB disk</li>
+      <li>Windows 10 Pro (Client Machine) — 2GB RAM, 40GB disk</li>
+      <li>Host-only network adapter to isolate lab traffic</li>
+    </ul>
+
+    <h2>What I Built</h2>
+
+    <h2>1. Domain Controller Configuration</h2>
+    <p>Promoted the Windows Server VM to a Domain Controller and created the domain <code>corp.alexlab.local</code>. Configured DNS to point to the DC's static IP.</p>
+    <div class="code-block">
+      <p class="cmd">PS C:\&gt; Install-WindowsFeature -Name AD-Domain-Services -IncludeManagementTools</p>
+      <p class="out">Success: Active Directory Domain Services installed</p>
+      <p class="cmd">PS C:\&gt; Install-ADDSForest -DomainName "corp.alexlab.local"</p>
+      <p class="comment"># Promoted server to DC, set DSRM password, rebooted</p>
+    </div>
+
+    <h2>2. Organizational Unit Structure</h2>
+    <p>Designed an OU hierarchy mimicking a small company with separate departments:</p>
+    <ul>
+      <li>corp.alexlab.local → Departments → IT, HR, Finance, Sales</li>
+      <li>Created 15 sample user accounts with realistic naming conventions</li>
+      <li>Assigned users to security groups by department</li>
+    </ul>
+
+    <h2>3. Group Policy Objects</h2>
+    <p>Created and linked three GPOs to practice common enterprise policies:</p>
+    <ul>
+      <li>Password Policy — 12-character minimum, complexity required, 90-day expiry</li>
+      <li>Desktop Lockdown — disabled Control Panel access for non-IT users</li>
+      <li>Drive Mapping — mapped a shared folder as Z: drive on login</li>
+    </ul>
+
+    <h2>4. Client Domain Join</h2>
+    <p>Joined the Windows 10 VM to the domain, logged in as a domain user, and verified GPOs applied correctly using <code>gpresult /r</code>.</p>
+
+    <div class="outcome-box">
+      <h3>✓ Key Outcomes</h3>
+      <ul>
+        <li>Practiced full AD lifecycle: domain creation → user provisioning → GPO deployment</li>
+        <li>Learned to troubleshoot replication and DNS errors in an isolated environment</li>
+        <li>Built confidence with PowerShell AD cmdlets (Get-ADUser, New-ADUser, Set-ADUser)</li>
+        <li>Documented all steps in a personal SOP for future reference</li>
+      </ul>
+    </div>
+
+    <a href="../index.html" class="back-link">← Back to Portfolio</a>
+  </div>
+
+</body>
+</html>

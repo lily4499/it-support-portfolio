@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Network Audit — Alex Rivera</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/project.css" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <nav class="proj-nav">
+    <a href="../index.html">← Home</a>
+    <span>/</span>
+    <span>projects</span>
+    <span>/</span>
+    <span style="color:#fff">network-audit</span>
+  </nav>
+
+  <div class="proj-hero">
+    <div class="container">
+      <p class="proj-tag">Networking · Security</p>
+      <h1>Home Network Audit</h1>
+      <p>Performed a structured security audit of a home network — scanning for devices, identifying risks, and implementing VLAN segmentation for IoT devices.</p>
+      <div class="proj-meta">
+        <div class="meta-item">
+          <span class="meta-label">Tools Used</span>
+          <span class="meta-value">Nmap, Wireshark, Router Admin Panel</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Duration</span>
+          <span class="meta-value">1 week</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Scope</span>
+          <span class="meta-value">Personal home network (authorized)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="proj-body">
+
+    <h2>Why This Project</h2>
+    <p>
+      Network troubleshooting is a core help desk skill. Before diagnosing user network problems, you need to understand what a healthy network looks like — and what a vulnerable one looks like. I audited my own home network to build this foundational awareness.
+    </p>
+
+    <h2>Phase 1: Device Discovery</h2>
+    <p>Used Nmap to scan the local subnet and identify every connected device:</p>
+    <div class="code-block">
+      <p class="cmd">$ nmap -sn 192.168.1.0/24</p>
+      <p class="out">Starting Nmap 7.94 ...</p>
+      <p class="out">Nmap scan report for 192.168.1.1 — Router (TP-Link)</p>
+      <p class="out">Nmap scan report for 192.168.1.5 — Desktop PC</p>
+      <p class="out">Nmap scan report for 192.168.1.8 — Smart TV (Samsung)</p>
+      <p class="out">Nmap scan report for 192.168.1.12 — Smart Thermostat</p>
+      <p class="out">Nmap scan report for 192.168.1.15 — Unknown device</p>
+      <p class="comment"># 18 hosts total discovered</p>
+    </div>
+
+    <h2>Phase 2: Risk Identification</h2>
+    <p>Cross-referenced each device and flagged three risk categories:</p>
+    <ul>
+      <li>Router still using default admin credentials (critical)</li>
+      <li>3 IoT devices (TV, thermostat, bulbs) on same network as PCs</li>
+      <li>1 unknown device identified as a neighbor's phone (misconfigured guest network)</li>
+      <li>UPnP enabled on router — unnecessary exposure</li>
+    </ul>
+
+    <h2>Phase 3: Remediations Applied</h2>
+    <ul>
+      <li>Changed router admin password to a 20-character random passphrase</li>
+      <li>Created a separate IoT VLAN (192.168.10.0/24) and moved all smart devices to it</li>
+      <li>Disabled UPnP and remote management on router</li>
+      <li>Fixed guest network isolation settings</li>
+    </ul>
+
+    <h2>Wireshark Capture</h2>
+    <p>Ran a 10-minute Wireshark capture to identify anomalous traffic. Observed the smart TV making periodic connections to Samsung telemetry servers — expected behavior, but documented as a baseline.</p>
+
+    <div class="outcome-box">
+      <h3>✓ Key Outcomes</h3>
+      <ul>
+        <li>Documented a full network inventory with MAC addresses and device roles</li>
+        <li>Reduced attack surface by isolating IoT devices via VLAN</li>
+        <li>Practiced Nmap and Wireshark in a safe, authorized environment</li>
+        <li>Produced a written audit report in a professional IT format</li>
+      </ul>
+    </div>
+
+    <a href="../index.html" class="back-link">← Back to Portfolio</a>
+  </div>
+
+</body>
+</html>

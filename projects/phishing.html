@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Phishing Awareness — Alex Rivera</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/project.css" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <nav class="proj-nav">
+    <a href="../index.html">← Home</a>
+    <span>/</span>
+    <span>projects</span>
+    <span>/</span>
+    <span style="color:#fff">phishing-awareness</span>
+  </nav>
+
+  <div class="proj-hero">
+    <div class="container">
+      <p class="proj-tag">Security · User Education</p>
+      <h1>Phishing Awareness Exercise</h1>
+      <p>Analyzed 10 real-world phishing samples, documented the red flags in each, and produced a one-page employee awareness guide.</p>
+      <div class="proj-meta">
+        <div class="meta-item">
+          <span class="meta-label">Source</span>
+          <span class="meta-value">PhishTank public database</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Samples Analyzed</span>
+          <span class="meta-value">10 real phishing emails</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Deliverable</span>
+          <span class="meta-value">Employee awareness guide</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="proj-body">
+
+    <h2>Why This Matters</h2>
+    <p>
+      Phishing is the #1 entry point for corporate breaches. As a help desk technician, I'll be the first line of defense — both responding to incidents and educating users. This project built my ability to identify phishing patterns quickly and communicate risks clearly.
+    </p>
+
+    <h2>Red Flags Catalog</h2>
+    <p>Across the 10 email samples analyzed, I identified these recurring red flags:</p>
+    <ul>
+      <li>Sender domain spoofing (e.g., "support@paypa1.com" instead of paypal.com)</li>
+      <li>Generic greetings — "Dear Customer" instead of the user's real name</li>
+      <li>Urgency language — "Your account will be suspended in 24 hours"</li>
+      <li>Mismatched URLs — link text says one domain, href goes to another</li>
+      <li>Unexpected attachments (.zip, .exe, macro-enabled .docm)</li>
+      <li>Poor grammar and unusual formatting</li>
+      <li>Requests for credentials, SSN, or payment details via email</li>
+    </ul>
+
+    <h2>Case Study: "Microsoft Security Alert" Phish</h2>
+    <p>One of the most convincing samples impersonated a Microsoft account security alert. Red flags identified:</p>
+
+    <div class="code-block">
+      <p class="comment"># Email header analysis</p>
+      <p class="cmd">From:    security@microsoft-support-alerts.net</p>
+      <p class="out">         ↳ Not microsoft.com — completely different domain</p>
+      <p class="cmd">Reply-To: collect@harvesting-srv.ru</p>
+      <p class="out">         ↳ Russian TLD, completely unrelated to sender</p>
+      <p class="cmd">Link:    "Click here to secure your account"</p>
+      <p class="out">         ↳ href points to 193.42.xx.xx (raw IP address)</p>
+    </div>
+
+    <h2>Employee Awareness Guide</h2>
+    <p>I distilled findings into a one-page guide structured for non-technical employees. Key sections:</p>
+    <ul>
+      <li>The 5 questions to ask before clicking any link</li>
+      <li>How to hover-check a URL without clicking it</li>
+      <li>What to do if you think you clicked something bad (report immediately, don't close browser)</li>
+      <li>How to report a suspicious email to IT</li>
+    </ul>
+
+    <div class="outcome-box">
+      <h3>✓ Key Outcomes</h3>
+      <ul>
+        <li>Cataloged 7 distinct phishing red flag categories from real samples</li>
+        <li>Practiced email header analysis to identify spoofed senders</li>
+        <li>Produced a plain-English awareness guide suitable for corporate distribution</li>
+        <li>Strengthened ability to communicate security risks to non-technical users</li>
+      </ul>
+    </div>
+
+    <a href="../index.html" class="back-link">← Back to Portfolio</a>
+  </div>
+
+</body>
+</html>

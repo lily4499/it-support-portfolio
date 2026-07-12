@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Liliane Konissi — IT Support Portfolio</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <span class="nav-logo">LK<span class="cursor">_</span></span>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certs">Certifications</a></li>
+        <li><a href="#contact" class="nav-cta">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about" class="mm-link">About</a></li>
+      <li><a href="#skills" class="mm-link">Skills</a></li>
+      <li><a href="#projects" class="mm-link">Projects</a></li>
+      <li><a href="#certs" class="mm-link">Certifications</a></li>
+      <li><a href="#contact" class="mm-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">~/portfolio/it-support</p>
+      <h1 class="hero-title">
+        Liliane Konissi<span class="blink-cursor">|</span>
+      </h1>
+      <p class="hero-sub">Entry-Level IT Support Specialist</p>
+      <p class="hero-desc">
+        I diagnose, fix, and document. From troubleshooting a broken network to resetting the 50th password of the day — I stay patient, systematic, and thorough.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary">View My Work</a>
+        <a href="assets/Liliane_Konissi_IT_Support_Resume.pdf" class="btn-secondary" download>Download Resume</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">200+</span>
+          <span class="stat-label">Tickets Resolved</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">3</span>
+          <span class="stat-label">Certifications</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">98%</span>
+          <span class="stat-label">User Satisfaction</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container">
+      <p class="section-path">/about/me</p>
+      <h2 class="section-title">Who I Am</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I'm an IT support professional passionate about keeping systems running and users productive. I thrive in fast-paced help desk environments where no two problems are alike.
+          </p>
+          <p>
+            My approach: define the problem clearly, isolate the cause, test one fix at a time, and document everything. Whether it's a Blue Screen of Death or a printer that "just stopped working," I treat every ticket with the same systematic care.
+          </p>
+          <p>
+            Outside of support work, I'm always studying — currently working through CompTIA Network+ material and building home lab projects to sharpen my hands-on skills.
+          </p>
+        </div>
+        <div class="about-terminal">
+          <div class="terminal-header">
+            <span class="t-dot red"></span>
+            <span class="t-dot yellow"></span>
+            <span class="t-dot green"></span>
+            <span class="t-title">liliane@portfolio ~ </span>
+          </div>
+          <div class="terminal-body">
+            <p><span class="t-prompt">$</span> whoami</p>
+            <p class="t-out">Liliane Konissi, IT Support Specialist</p>
+            <p><span class="t-prompt">$</span> cat skills.txt</p>
+            <p class="t-out">Windows, Active Directory, TCP/IP,</p>
+            <p class="t-out">Help Desk, Hardware, Ticketing Systems</p>
+            <p><span class="t-prompt">$</span> cat status.txt</p>
+            <p class="t-out green">Available for hire ✓</p>
+            <p><span class="t-prompt">$</span> <span class="blink-cursor">|</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section section-dark" id="skills">
+    <div class="container">
+      <p class="section-path">/skills</p>
+      <h2 class="section-title">Technical Skill Set</h2>
+      <div class="skills-grid">
+
+        <div class="skill-card">
+          <div class="skill-icon">🖥️</div>
+          <h3>Hardware &amp; Devices</h3>
+          <ul>
+            <li>Desktop &amp; laptop assembly / repair</li>
+            <li>Component identification (CPU, RAM, GPU, PSU)</li>
+            <li>Peripheral setup: printers, monitors, docking stations</li>
+            <li>Device imaging and OS deployment</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">🪟</div>
+          <h3>Operating Systems</h3>
+          <ul>
+            <li>Windows 10/11 administration</li>
+            <li>macOS basic support</li>
+            <li>Linux command line fundamentals</li>
+            <li>Registry editing, Group Policy, Event Viewer</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">🌐</div>
+          <h3>Networking</h3>
+          <ul>
+            <li>IP addressing, DNS, DHCP</li>
+            <li>LAN/WAN/Wi-Fi troubleshooting</li>
+            <li>ping, ipconfig, tracert, nslookup</li>
+            <li>VPN setup and remote access support</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">👤</div>
+          <h3>Active Directory</h3>
+          <ul>
+            <li>User account creation &amp; management</li>
+            <li>Password resets and account unlocks</li>
+            <li>Group Policy basics</li>
+            <li>OU structure and permissions</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">🔒</div>
+          <h3>Security Basics</h3>
+          <ul>
+            <li>Phishing identification and response</li>
+            <li>MFA setup and troubleshooting</li>
+            <li>Principle of least privilege</li>
+            <li>Malware detection and remediation</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">🎫</div>
+          <h3>Helpdesk &amp; Tools</h3>
+          <ul>
+            <li>ServiceNow, Jira, Zendesk</li>
+            <li>Remote support via TeamViewer / RDP</li>
+            <li>Microsoft 365 Administration</li>
+            <li>Ticket documentation &amp; escalation</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <div class="container">
+      <p class="section-path">/projects</p>
+      <h2 class="section-title">Portfolio Projects</h2>
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div class="project-tag">Home Lab</div>
+          <h3>Active Directory Lab</h3>
+          <p>
+            Set up a virtualized Windows Server environment using VirtualBox. Created an AD domain, configured OUs, deployed Group Policy Objects, and practiced user provisioning workflows mirroring real enterprise environments.
+          </p>
+          <div class="project-tech">
+            <span>Windows Server 2022</span>
+            <span>VirtualBox</span>
+            <span>Active Directory</span>
+            <span>GPO</span>
+          </div>
+          <a href="projects/ad-lab.html" class="project-link">View Write-Up →</a>
+        </div>
+
+        <div class="project-card">
+          <div class="project-tag">Networking</div>
+          <h3>Home Network Audit</h3>
+          <p>
+            Performed a full audit of a home network: mapped all connected devices, identified devices with default credentials, segmented IoT devices to a separate VLAN, and documented findings in a mock IT report.
+          </p>
+          <div class="project-tech">
+            <span>Nmap</span>
+            <span>Wireshark</span>
+            <span>VLAN</span>
+            <span>Router Admin</span>
+          </div>
+          <a href="projects/network-audit.html" class="project-link">View Write-Up →</a>
+        </div>
+
+        <div class="project-card">
+          <div class="project-tag">Ticketing</div>
+          <h3>Mock Help Desk Simulation</h3>
+          <p>
+            Created a simulated help desk scenario set with 15 realistic user tickets. Documented each resolution step-by-step, practiced escalation decisions, and built a personal SOP library for common issues.
+          </p>
+          <div class="project-tech">
+            <span>Jira (Free Tier)</span>
+            <span>SOP Writing</span>
+            <span>Troubleshooting</span>
+          </div>
+          <a href="projects/helpdesk-sim.html" class="project-link">View Write-Up →</a>
+        </div>
+
+        <div class="project-card">
+          <div class="project-tag">Security</div>
+          <h3>Phishing Awareness Exercise</h3>
+          <p>
+            Analyzed 10 real-world phishing email samples (from PhishTank), documented the red flags in each, and created a one-page user awareness guide suitable for distributing in a corporate environment.
+          </p>
+          <div class="project-tech">
+            <span>PhishTank</span>
+            <span>Email Analysis</span>
+            <span>User Education</span>
+          </div>
+          <a href="projects/phishing.html" class="project-link">View Write-Up →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <!-- CERTIFICATIONS -->
+<section class="section section-dark" id="certs">
+  <div class="container">
+    <p class="section-path">/certifications</p>
+    <h2 class="section-title">Credentials</h2>
+
+    <div class="certs-grid">
+
+      <!-- Google IT Support -->
+      <div class="cert-card in-progress">
+        <div class="cert-badge prog">→</div>
+        <div class="cert-info">
+          <h3>Google IT Support Professional Certificate</h3>
+          <p>Coursera — 6-course Professional Certificate</p>
+          <span class="cert-status prog-label">
+            In Progress · Expected September 2026
+          </span>
+        </div>
+      </div>
+
+      <!-- CompTIA A+ -->
+      <div class="cert-card in-progress">
+        <div class="cert-badge prog">→</div>
+        <div class="cert-info">
+          <h3>CompTIA A+</h3>
+          <p>Core 1 (220-1201) &amp; Core 2 (220-1202)</p>
+          <span class="cert-status prog-label">
+            In Progress · Expected October 2026
+          </span>
+        </div>
+      </div>
+
+      <!-- CompTIA Network+ -->
+      <div class="cert-card in-progress">
+        <div class="cert-badge prog">→</div>
+        <div class="cert-info">
+          <h3>CompTIA Network+</h3>
+          <p>N10-009</p>
+          <span class="cert-status prog-label">
+            In Progress · Expected November 2026
+          </span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- <section class="section section-dark" id="certs">
+    <div class="container">
+      <p class="section-path">/certifications</p>
+      <h2 class="section-title">Credentials</h2>
+      <div class="certs-grid">
+
+        <div class="cert-card earned">
+          <div class="cert-badge">✓</div>
+          <div class="cert-info">
+            <h3>CompTIA A+</h3>
+            <p>Core 1 (220-1101) &amp; Core 2 (220-1102)</p>
+            <span class="cert-status earned-label">Earned · 2024</span>
+          </div>
+        </div>
+
+        <div class="cert-card earned">
+          <div class="cert-badge">✓</div>
+          <div class="cert-info">
+            <h3>Google IT Support Certificate</h3>
+            <p>Coursera — 6-course professional certificate</p>
+            <span class="cert-status earned-label">Earned · 2023</span>
+          </div>
+        </div>
+
+        <div class="cert-card in-progress">
+          <div class="cert-badge prog">→</div>
+          <div class="cert-info">
+            <h3>CompTIA Network+</h3>
+            <p>N10-009 — Currently studying</p>
+            <span class="cert-status prog-label">In Progress · Est. Q3 2025</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section> -->
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="container contact-container">
+      <p class="section-path">/contact</p>
+      <h2 class="section-title">Get In Touch</h2>
+      <p class="contact-sub">Open to entry-level IT support, help desk, and junior sysadmin roles. Let's connect.</p>
+      <div class="contact-links">
+<a
+  href="https://mail.google.com/mail/?view=cm&fs=1&to=lilianekonissi3@gmail.com"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="contact-item"
+>
+  <span class="c-icon">✉</span>
+  lilianekonissi3@gmail.com
+</a>
+        <!-- <a href="mailto:alex@example.com" class="contact-item">
+          <span class="c-icon">✉</span>
+          alex@example.com
+        </a> -->
+        <a href="https://linkedin.com/in/liliane-tech" class="contact-item" target="_blank">
+          <span class="c-icon">in</span>
+          linkedin.com/in/liliane-tech
+        </a>
+        <a href="https://github.com/lily4499" class="contact-item" target="_blank">
+          <span class="c-icon">gh</span>
+          github.com/lily4499
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>Liliane Konissi · IT Support Portfolio · Built with HTML &amp; CSS · Hosted on GitHub Pages</p>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
