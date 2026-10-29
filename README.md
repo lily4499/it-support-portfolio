@@ -1,4 +1,4 @@
-# IT Support Portfolio — Alex Rivera
+
 
 Personal portfolio site for entry-level IT support job applications.
 
